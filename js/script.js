@@ -38,7 +38,9 @@ document.querySelectorAll("button[data-choice]").forEach(button => {
 
     playerWinsDisplay.textContent = playerWins;
     computerWinsDisplay.textContent = computerWins;
-    results.innerHTML = `You chose ${uchoice}<br>The computer chose ${compchoice}<br>${message}`;
+    results.innerHTML = `You chose ${uchoice}<br><br>
+    The computer chose ${compchoice}<br><br>
+    ${message}<br><br>`;
     resultsBox.style.display = "block";
     scoreboard.style.display = "block";
   });
