@@ -17,9 +17,9 @@ body {
 }
 
 .results-box {
-  border: 1px;
+  border: 1px black;
   border-color: black;
-  background-color: rgb(181, 188, 181);
+  background-color: rgb(228, 194, 213);
   padding: 1em;
   margin: 1em auto;
   width: 80%;
