@@ -13,28 +13,28 @@ document.querySelectorAll("button[data-choice]").forEach(button => {
   button.addEventListener("click", () => {
     const uchoice = button.getAttribute("data-choice");
     const compchoice = choices[Math.floor(Math.random() * choices.length)];
+
+    let playerWon = false;
+    let computerWon = false;
     let message = "";
 
-    switch (uchoice) {
-      case "Bear":
-        message = compchoice === "Bear" ? "It's a tie!" :
-                  compchoice === "Ninja" ? "You Win!" : "The Computer Wins!";
-        break;
-      case "Ninja":
-        message = compchoice === "Bear" ? "The Computer Wins!" :
-                  compchoice === "Ninja" ? "It's a tie!" : "You Win!";
-        break;
-      case "Hunter":
-        message = compchoice === "Bear" ? "You win!" :
-                  compchoice === "Ninja" ? "The Computer Wins!" : "It's a tie!";
-        break;
+
+    if (uchoice === compchoice) {
+      message = "It's a tie!";
+    } else if (
+      (uchoice === "Bear" && compchoice === "Hunter") ||
+      (uchoice === "Hunter" && compchoice === "Ninja") ||
+      (uchoice === "Ninja" && compchoice === "Bear")
+    ) {
+      playerWon = true;
+      message = "You Win!";
+    } else {
+      computerWon = true;
+      message = "The Computer Wins!";
     }
 
-    if (message === "You win!") {
-      playerWins++;
-    } else if (message === "The Computer Wins!") {
-      computerWins++;
-    }
+    if (playerWon) playerWins++;
+    if (computerWon) computerWins++;
 
     playerWinsDisplay.textContent = playerWins;
     computerWinsDisplay.textContent = computerWins;
@@ -44,9 +44,12 @@ document.querySelectorAll("button[data-choice]").forEach(button => {
   });
 });
 
-
 resetBtn.addEventListener("click", () => {
   resultsBox.style.display = "none";
   scoreboard.style.display = "none";
   results.innerHTML = "";
+  playerWins = 0;
+  computerWins = 0;
+  playerWinsDisplay.textContent = playerWins;
+  computerWinsDisplay.textContent = computerWins;
 });
