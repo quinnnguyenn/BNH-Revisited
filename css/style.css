@@ -11,3 +11,30 @@ button {
   padding: 0.5em 1em;
 }
 
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 2em;
+}
+
+.divider {
+  width: 80%;
+  margin: 1em auto;
+}
+
+.results-box {
+  border: 1px;
+  border-color: black;
+  background-color: #e8f0ff;
+  padding: 1em;
+  margin: 1em auto;
+  width: 80%;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: left;
+}
+
+.scoreboard {
+  margin-top: 1em;
+  font-size: 1.1em;
+}
