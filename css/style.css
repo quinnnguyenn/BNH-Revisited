@@ -1,38 +1,38 @@
 body {
-  text-align: center;
+    text-align: center;
 }
 
 .button-row {
-  margin: 1em 0;
+    margin: 1em 0;
 }
 
 .container {
-  max-width: 600px;
-  margin: auto;
-  padding: 2em;
+    max-width: 600px;
+    margin: auto;
+    padding: 2em;
 }
 
 .divider {
-  width: 50%;
+    width: 50%;
 }
 
 .results-box {
-  border: 1px solid black;
-  background-color: rgb(228, 194, 213);
-  padding: 1em;
-  margin: 1em auto;
-  width: 80%;
-  font-weight: bold;
-  font-size: 1.2em;
-  text-align: left;
+    border: 1px solid black;
+    background-color: rgb(228, 194, 213);
+    padding: 1em;
+    margin: 1em auto;
+    width: 80%;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: left;
 }
 
 .scoreboard {
-  margin-top: 1em;
-  font-size: 1.1em;
+    margin-top: 1em;
+    font-size: 1.1em;
 }
 
 ul {
-  display: inline-block;
-  text-align: left;
+    display: inline-block;
+    text-align: left;
 }
